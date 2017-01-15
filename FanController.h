@@ -6,6 +6,7 @@
 class FanController {
   public:
     FanController(byte fanPin, int minTempC, int maxTempC);
+    FanController(void);
     void adjustToTemperature(float tempCelsius);
     void on();
     void off();

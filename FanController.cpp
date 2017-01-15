@@ -8,6 +8,14 @@ FanController::FanController(byte fanPin, int minTempC, int maxTempC) {
   _fanSpeed = 0;
 }
 
+FanController::FanController(void) {
+  _fanPin = 2;
+  _minTempCelsius = 27;
+  _maxTempCelsius = 50;
+  _fanStatus = 0;
+  _fanSpeed = 0;
+}
+
 void FanController::adjustToTemperature(float tempCelsius){
   if (tempCelsius < _minTempCelsius) {
     // if temperature is lower than the minimum temperature, turn the fan off
